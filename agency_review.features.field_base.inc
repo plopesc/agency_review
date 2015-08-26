@@ -91,7 +91,7 @@ function agency_review_field_default_field_bases() {
           'type' => 'none',
         ),
         'target_bundles' => array(
-          'bnb' => 'bnb',
+          'listing' => 'listing',
         ),
       ),
       'target_type' => 'rooms_unit',

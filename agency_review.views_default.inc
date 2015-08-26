@@ -39,6 +39,11 @@ function agency_review_views_default_views() {
   $handler->display->display_options['relationships']['field_review_property_target_id']['id'] = 'field_review_property_target_id';
   $handler->display->display_options['relationships']['field_review_property_target_id']['table'] = 'field_data_field_review_property';
   $handler->display->display_options['relationships']['field_review_property_target_id']['field'] = 'field_review_property_target_id';
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   /* Field: Content: Name */
   $handler->display->display_options['fields']['field_review_name']['id'] = 'field_review_name';
   $handler->display->display_options['fields']['field_review_name']['table'] = 'field_data_field_review_name';
@@ -60,20 +65,25 @@ function agency_review_views_default_views() {
     'style' => 'average',
     'text' => 'none',
   );
+  /* Field: Content: Post date */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = '';
+  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created']['date_format'] = 'month_and_year';
+  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
   /* Field: Content: Comments */
   $handler->display->display_options['fields']['field_review_comments']['id'] = 'field_review_comments';
   $handler->display->display_options['fields']['field_review_comments']['table'] = 'field_data_field_review_comments';
   $handler->display->display_options['fields']['field_review_comments']['field'] = 'field_review_comments';
   $handler->display->display_options['fields']['field_review_comments']['label'] = '';
+  $handler->display->display_options['fields']['field_review_comments']['alter']['max_length'] = '350';
+  $handler->display->display_options['fields']['field_review_comments']['alter']['more_link'] = TRUE;
+  $handler->display->display_options['fields']['field_review_comments']['alter']['more_link_text'] = 'Read More';
+  $handler->display->display_options['fields']['field_review_comments']['alter']['more_link_path'] = 'node/[nid]';
+  $handler->display->display_options['fields']['field_review_comments']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_review_comments']['element_label_colon'] = FALSE;
-  /* Field: Content: Post date */
-  $handler->display->display_options['fields']['created']['id'] = 'created';
-  $handler->display->display_options['fields']['created']['table'] = 'node';
-  $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['label'] = 'Published on';
-  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['created']['date_format'] = 'short';
-  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';

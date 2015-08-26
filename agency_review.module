@@ -7,6 +7,15 @@
 include_once 'agency_review.features.inc';
 
 /**
+ * Implements hook_ctools_plugin_directory()
+ */
+function agency_review_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'ctools' && $plugin_type == 'content_types') {
+    return 'plugins/content_types';
+  }
+}
+
+/**
  * Implements hook_pet_substitutions_alter().
  */
 function agency_review_pet_substitutions_alter(&$substitutions, $params) {
@@ -35,5 +44,27 @@ function agency_review_node_access($node, $op, $account) {
         }
       }
     }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ * FORM_ID = review_node_form.
+ */
+function agency_review_form_review_node_form_alter(&$form, &$form_state) {
+  global $user;
+
+  // Set the right property to review and disable the selection.
+  if (isset($_GET['property_id']) && isset($form['field_review_property'])) {
+    $form['field_review_property'][LANGUAGE_NONE]['#default_value'] = $_GET['property_id'];
+    $form['field_review_property']['#disabled'] = TRUE;
+  }
+  // Set User mail.
+  if (isset($user->mail) && isset($form['field_review_email'])) {
+    $form['field_review_email'][LANGUAGE_NONE][0]['email']['#default_value'] = $user->mail;
+  }
+  // Set User name.
+  if (isset($user->name) && isset($form['field_review_name'])) {
+    $form['field_review_name'][LANGUAGE_NONE][0]['value']['#default_value'] = $user->name;
   }
 }
