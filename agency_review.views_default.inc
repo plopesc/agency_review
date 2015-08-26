@@ -71,8 +71,9 @@ function agency_review_views_default_views() {
   $handler->display->display_options['fields']['created']['field'] = 'created';
   $handler->display->display_options['fields']['created']['label'] = '';
   $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['created']['date_format'] = 'month_and_year';
+  $handler->display->display_options['fields']['created']['date_format'] = 'agency_review_m_y';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  $handler->display->display_options['fields']['created']['format_date_sql'] = 0;
   /* Field: Content: Comments */
   $handler->display->display_options['fields']['field_review_comments']['id'] = 'field_review_comments';
   $handler->display->display_options['fields']['field_review_comments']['table'] = 'field_data_field_review_comments';

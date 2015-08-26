@@ -59,6 +59,7 @@ features[variable][] = comment_form_location_review
 features[variable][] = comment_preview_review
 features[variable][] = comment_review
 features[variable][] = comment_subject_field_review
+features[variable][] = date_format_agency_review_m_y
 features[variable][] = field_bundle_settings_node__review
 features[variable][] = menu_options_review
 features[variable][] = menu_parent_review
