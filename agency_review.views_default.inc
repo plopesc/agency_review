@@ -44,12 +44,13 @@ function agency_review_views_default_views() {
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  /* Field: Content: Name */
-  $handler->display->display_options['fields']['field_review_name']['id'] = 'field_review_name';
-  $handler->display->display_options['fields']['field_review_name']['table'] = 'field_data_field_review_name';
-  $handler->display->display_options['fields']['field_review_name']['field'] = 'field_review_name';
-  $handler->display->display_options['fields']['field_review_name']['label'] = '';
-  $handler->display->display_options['fields']['field_review_name']['element_label_colon'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Rating */
   $handler->display->display_options['fields']['field_review_rating']['id'] = 'field_review_rating';
   $handler->display->display_options['fields']['field_review_rating']['table'] = 'field_data_field_review_rating';
@@ -65,6 +66,14 @@ function agency_review_views_default_views() {
     'style' => 'average',
     'text' => 'none',
   );
+  /* Field: Content: Name */
+  $handler->display->display_options['fields']['field_review_name']['id'] = 'field_review_name';
+  $handler->display->display_options['fields']['field_review_name']['table'] = 'field_data_field_review_name';
+  $handler->display->display_options['fields']['field_review_name']['field'] = 'field_review_name';
+  $handler->display->display_options['fields']['field_review_name']['label'] = '';
+  $handler->display->display_options['fields']['field_review_name']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_review_name']['alter']['text'] = '[field_review_name],';
+  $handler->display->display_options['fields']['field_review_name']['element_label_colon'] = FALSE;
   /* Field: Content: Post date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'node';
