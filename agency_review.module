@@ -93,3 +93,15 @@ function agency_review_date_format_types() {
     'agency_review_m_y' => t('Month and Year'),
   );
 }
+
+/**
+ * Implements hook_menu_link_alter().
+ * Hide Review from node/add page.
+ */
+function agency_review_menu_link_alter(&$item) {
+  if (isset($item['menu_name']) && isset($item['link_path'])) {
+    if ($item['menu_name'] == 'navigation' && $item['link_path'] == 'node/add/review') {
+      $item['hidden'] = 1;
+    }
+  }
+}
