@@ -21,7 +21,7 @@ function agency_unit_review_button_render($subtype, $conf, $args, $pane_context,
   $content = '';
 
   if (user_is_logged_in()) {
-    $link = l('Add Review', 'node/add/review', array('query' => array('property_id' => $args[0]), 'attributes' => array('class' => array('col-xs-12', 'agency-add-review'))));
+    $link = l('Add Review', 'node/add/review', array('query' => array('property_id' => $args[0]), 'attributes' => array('class' => array('col-xs-12 col-sm-6 col-md-4 col-md-offset-8 col-sm-offset-6', 'agency-add-review'))));
     $content = '<div class="row">' . $link . '</div>';
   }
 

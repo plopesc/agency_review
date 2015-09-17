@@ -187,7 +187,7 @@ function agency_review_default_page_manager_handlers() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'col-xs-12 col-sm-7',
+      'css_class' => 'col-xs-12',
     );
     $pane->extras = array();
     $pane->position = 3;
@@ -201,4 +201,115 @@ function agency_review_default_page_manager_handlers() {
   $export['node_view__review'] = $handler;
 
   return $export;
+}
+
+/**
+ * Implements hook_default_page_manager_pages().
+ */
+function agency_review_default_page_manager_pages() {
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'property_reviews';
+  $page->task = 'page';
+  $page->admin_title = 'Property Reviews';
+  $page->admin_description = '';
+  $page->path = 'listing/%unit_id/reviews';
+  $page->access = array();
+  $page->menu = array();
+  $page->arguments = array(
+    'unit_id' => array(
+      'id' => 1,
+      'identifier' => 'Bookable Units: ID',
+      'name' => 'entity_id:rooms_unit',
+      'settings' => array(),
+    ),
+  );
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_property_reviews__panel';
+  $handler->task = 'page';
+  $handler->subtask = 'property_reviews';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Panel',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'page-reviews',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => 'panel',
+  );
+  $display = new panels_display();
+  $display->layout = 'bootstrap_sidebar_right';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'top' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+      'bottom' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '%unit_id:name reviews';
+  $display->uuid = 'f0add10f-f73c-42c4-b155-a38f938a0d6f';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-73194b78-203d-455e-aabc-28bd2ca9ec02';
+    $pane->panel = 'left';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'property_reviews-panel_pane_2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '73194b78-203d-455e-aabc-28bd2ca9ec02';
+    $display->content['new-73194b78-203d-455e-aabc-28bd2ca9ec02'] = $pane;
+    $display->panels['left'][0] = 'new-73194b78-203d-455e-aabc-28bd2ca9ec02';
+    $pane = new stdClass();
+    $pane->pid = 'new-38e7e676-33a6-4741-8ccd-0e090a0caef9';
+    $pane->panel = 'right';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'property-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '38e7e676-33a6-4741-8ccd-0e090a0caef9';
+    $display->content['new-38e7e676-33a6-4741-8ccd-0e090a0caef9'] = $pane;
+    $display->panels['right'][0] = 'new-38e7e676-33a6-4741-8ccd-0e090a0caef9';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-73194b78-203d-455e-aabc-28bd2ca9ec02';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['property_reviews'] = $page;
+
+  return $pages;
+
 }
