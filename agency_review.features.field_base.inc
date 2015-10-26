@@ -10,7 +10,7 @@
 function agency_review_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_review_comments'
+  // Exported field_base: 'field_review_comments'.
   $field_bases['field_review_comments'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -29,7 +29,7 @@ function agency_review_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_review_email'
+  // Exported field_base: 'field_review_email'.
   $field_bases['field_review_email'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -44,7 +44,7 @@ function agency_review_field_default_field_bases() {
     'type' => 'email',
   );
 
-  // Exported field_base: 'field_review_name'
+  // Exported field_base: 'field_review_name'.
   $field_bases['field_review_name'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -65,7 +65,7 @@ function agency_review_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_review_property'
+  // Exported field_base: 'field_review_property'.
   $field_bases['field_review_property'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -100,7 +100,7 @@ function agency_review_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_review_rating'
+  // Exported field_base: 'field_review_rating'.
   $field_bases['field_review_rating'] = array(
     'active' => 1,
     'cardinality' => 1,

@@ -14,9 +14,9 @@ function agency_review_user_default_permissions() {
   $permissions['create review content'] = array(
     'name' => 'create review content',
     'roles' => array(
-      'site_admin' => 'site_admin',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'site_admin' => 'site_admin',
     ),
     'module' => 'node',
   );
@@ -26,8 +26,8 @@ function agency_review_user_default_permissions() {
     'name' => 'delete any review content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site_admin' => 'site_admin',
       'agency_owner' => 'agency_owner',
+      'site_admin' => 'site_admin',
     ),
     'module' => 'node',
   );
@@ -37,9 +37,9 @@ function agency_review_user_default_permissions() {
     'name' => 'delete own review content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site_admin' => 'site_admin',
       'agency_owner' => 'agency_owner',
       'property_owner' => 'property_owner',
+      'site_admin' => 'site_admin',
     ),
     'module' => 'node',
   );
@@ -49,8 +49,8 @@ function agency_review_user_default_permissions() {
     'name' => 'edit any review content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site_admin' => 'site_admin',
       'agency_owner' => 'agency_owner',
+      'site_admin' => 'site_admin',
     ),
     'module' => 'node',
   );
@@ -60,9 +60,9 @@ function agency_review_user_default_permissions() {
     'name' => 'edit own review content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site_admin' => 'site_admin',
       'agency_owner' => 'agency_owner',
       'property_owner' => 'property_owner',
+      'site_admin' => 'site_admin',
     ),
     'module' => 'node',
   );
@@ -72,8 +72,8 @@ function agency_review_user_default_permissions() {
     'name' => 'publish any content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site_admin' => 'site_admin',
       'agency_owner' => 'agency_owner',
+      'site_admin' => 'site_admin',
     ),
     'module' => 'publishcontent',
   );
@@ -92,8 +92,8 @@ function agency_review_user_default_permissions() {
     'name' => 'publish editable content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site_admin' => 'site_admin',
       'agency_owner' => 'agency_owner',
+      'site_admin' => 'site_admin',
     ),
     'module' => 'publishcontent',
   );
@@ -121,8 +121,8 @@ function agency_review_user_default_permissions() {
     'name' => 'unpublish any content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site_admin' => 'site_admin',
       'agency_owner' => 'agency_owner',
+      'site_admin' => 'site_admin',
     ),
     'module' => 'publishcontent',
   );
@@ -141,8 +141,8 @@ function agency_review_user_default_permissions() {
     'name' => 'unpublish editable content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site_admin' => 'site_admin',
       'agency_owner' => 'agency_owner',
+      'site_admin' => 'site_admin',
     ),
     'module' => 'publishcontent',
   );

@@ -10,7 +10,7 @@
 function agency_review_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-review-field_review_comments'
+  // Exported field_instance: 'node-review-field_review_comments'.
   $field_instances['node-review-field_review_comments'] = array(
     'bundle' => 'review',
     'default_value' => NULL,
@@ -50,7 +50,7 @@ function agency_review_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-review-field_review_email'
+  // Exported field_instance: 'node-review-field_review_email'.
   $field_instances['node-review-field_review_email'] = array(
     'bundle' => 'review',
     'default_value' => NULL,
@@ -89,7 +89,7 @@ function agency_review_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-review-field_review_name'
+  // Exported field_instance: 'node-review-field_review_name'.
   $field_instances['node-review-field_review_name'] = array(
     'bundle' => 'review',
     'default_value' => NULL,
@@ -129,7 +129,7 @@ function agency_review_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-review-field_review_property'
+  // Exported field_instance: 'node-review-field_review_property'.
   $field_instances['node-review-field_review_property'] = array(
     'bundle' => 'review',
     'default_value' => NULL,
@@ -184,7 +184,7 @@ function agency_review_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-review-field_review_rating'
+  // Exported field_instance: 'node-review-field_review_rating'.
   $field_instances['node-review-field_review_rating'] = array(
     'bundle' => 'review',
     'default_value' => NULL,

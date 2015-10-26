@@ -63,6 +63,7 @@ features[variable][] = node_options_review
 features[variable][] = node_preview_review
 features[variable][] = node_submitted_review
 features[variable][] = page_manager_node_view_disabled
+features[variable][] = pathauto_node_review_pattern
 features[variable][] = publishcontent_review
 features[views_view][] = property_reviews
 features_exclude[dependencies][views] = views
