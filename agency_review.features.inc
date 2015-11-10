@@ -57,6 +57,7 @@ function agency_review_default_pet() {
     "cc_default" : "",
     "bcc_default" : "",
     "recipient_callback" : "",
+    "token_entity_types" : ["node", "user"],
     "rdf_mapping" : []
   }');
   return $items;
