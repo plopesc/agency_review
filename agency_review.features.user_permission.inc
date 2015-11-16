@@ -16,7 +16,6 @@ function agency_review_user_default_permissions() {
     'roles' => array(
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
-      'site_admin' => 'site_admin',
     ),
     'module' => 'node',
   );
@@ -25,9 +24,8 @@ function agency_review_user_default_permissions() {
   $permissions['delete any review content'] = array(
     'name' => 'delete any review content',
     'roles' => array(
-      'administrator' => 'administrator',
       'agency_owner' => 'agency_owner',
-      'site_admin' => 'site_admin',
+      'content_admin' => 'content_admin',
     ),
     'module' => 'node',
   );
@@ -36,10 +34,11 @@ function agency_review_user_default_permissions() {
   $permissions['delete own review content'] = array(
     'name' => 'delete own review content',
     'roles' => array(
-      'administrator' => 'administrator',
       'agency_owner' => 'agency_owner',
+      'authenticated user' => 'authenticated user',
+      'content_admin' => 'content_admin',
       'property_owner' => 'property_owner',
-      'site_admin' => 'site_admin',
+      'tour_owner' => 'tour_owner',
     ),
     'module' => 'node',
   );
@@ -48,9 +47,8 @@ function agency_review_user_default_permissions() {
   $permissions['edit any review content'] = array(
     'name' => 'edit any review content',
     'roles' => array(
-      'administrator' => 'administrator',
       'agency_owner' => 'agency_owner',
-      'site_admin' => 'site_admin',
+      'content_admin' => 'content_admin',
     ),
     'module' => 'node',
   );
@@ -59,10 +57,11 @@ function agency_review_user_default_permissions() {
   $permissions['edit own review content'] = array(
     'name' => 'edit own review content',
     'roles' => array(
-      'administrator' => 'administrator',
       'agency_owner' => 'agency_owner',
+      'authenticated user' => 'authenticated user',
+      'content_admin' => 'content_admin',
       'property_owner' => 'property_owner',
-      'site_admin' => 'site_admin',
+      'tour_owner' => 'tour_owner',
     ),
     'module' => 'node',
   );
@@ -71,8 +70,8 @@ function agency_review_user_default_permissions() {
   $permissions['publish any content'] = array(
     'name' => 'publish any content',
     'roles' => array(
-      'administrator' => 'administrator',
       'agency_owner' => 'agency_owner',
+      'content_admin' => 'content_admin',
       'site_admin' => 'site_admin',
     ),
     'module' => 'publishcontent',
@@ -81,9 +80,7 @@ function agency_review_user_default_permissions() {
   // Exported permission: 'publish any review content'.
   $permissions['publish any review content'] = array(
     'name' => 'publish any review content',
-    'roles' => array(
-      'site_admin' => 'site_admin',
-    ),
+    'roles' => array(),
     'module' => 'publishcontent',
   );
 
@@ -91,8 +88,8 @@ function agency_review_user_default_permissions() {
   $permissions['publish editable content'] = array(
     'name' => 'publish editable content',
     'roles' => array(
-      'administrator' => 'administrator',
       'agency_owner' => 'agency_owner',
+      'content_admin' => 'content_admin',
       'site_admin' => 'site_admin',
     ),
     'module' => 'publishcontent',
@@ -101,9 +98,7 @@ function agency_review_user_default_permissions() {
   // Exported permission: 'publish editable review content'.
   $permissions['publish editable review content'] = array(
     'name' => 'publish editable review content',
-    'roles' => array(
-      'site_admin' => 'site_admin',
-    ),
+    'roles' => array(),
     'module' => 'publishcontent',
   );
 
@@ -111,7 +106,7 @@ function agency_review_user_default_permissions() {
   $permissions['publish own review content'] = array(
     'name' => 'publish own review content',
     'roles' => array(
-      'site_admin' => 'site_admin',
+      'content_editor' => 'content_editor',
     ),
     'module' => 'publishcontent',
   );
@@ -120,8 +115,8 @@ function agency_review_user_default_permissions() {
   $permissions['unpublish any content'] = array(
     'name' => 'unpublish any content',
     'roles' => array(
-      'administrator' => 'administrator',
       'agency_owner' => 'agency_owner',
+      'content_admin' => 'content_admin',
       'site_admin' => 'site_admin',
     ),
     'module' => 'publishcontent',
@@ -130,9 +125,7 @@ function agency_review_user_default_permissions() {
   // Exported permission: 'unpublish any review content'.
   $permissions['unpublish any review content'] = array(
     'name' => 'unpublish any review content',
-    'roles' => array(
-      'site_admin' => 'site_admin',
-    ),
+    'roles' => array(),
     'module' => 'publishcontent',
   );
 
@@ -140,8 +133,8 @@ function agency_review_user_default_permissions() {
   $permissions['unpublish editable content'] = array(
     'name' => 'unpublish editable content',
     'roles' => array(
-      'administrator' => 'administrator',
       'agency_owner' => 'agency_owner',
+      'content_admin' => 'content_admin',
       'site_admin' => 'site_admin',
     ),
     'module' => 'publishcontent',
@@ -150,9 +143,7 @@ function agency_review_user_default_permissions() {
   // Exported permission: 'unpublish editable review content'.
   $permissions['unpublish editable review content'] = array(
     'name' => 'unpublish editable review content',
-    'roles' => array(
-      'site_admin' => 'site_admin',
-    ),
+    'roles' => array(),
     'module' => 'publishcontent',
   );
 
@@ -160,7 +151,7 @@ function agency_review_user_default_permissions() {
   $permissions['unpublish own review content'] = array(
     'name' => 'unpublish own review content',
     'roles' => array(
-      'site_admin' => 'site_admin',
+      'content_editor' => 'content_editor',
     ),
     'module' => 'publishcontent',
   );
