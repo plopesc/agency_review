@@ -40,25 +40,3 @@ function agency_review_node_info() {
   drupal_alter('node_info', $items);
   return $items;
 }
-
-/**
- * Implements hook_default_pet().
- */
-function agency_review_default_pet() {
-  $items = array();
-  $items['new_property_review'] = entity_import('pet', '{
-    "name" : "new_property_review",
-    "title" : "New Property Review",
-    "subject" : "New Property Review",
-    "mail_body" : "A new review has been submitted from [site:name].\\r\\n\\r\\nYou can edit and publish content at:\\r\\n[node:url]",
-    "mail_body_plain" : null,
-    "send_plain" : "0",
-    "from_override" : "",
-    "cc_default" : "",
-    "bcc_default" : "",
-    "recipient_callback" : "",
-    "token_entity_types" : ["node", "user"],
-    "rdf_mapping" : []
-  }');
-  return $items;
-}

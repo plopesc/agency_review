@@ -31,7 +31,6 @@ features[field_instance][] = node-review-field_review_rating
 features[node][] = review
 features[page_manager_handlers][] = node_view__review
 features[page_manager_pages][] = property_reviews
-features[pet][] = new_property_review
 features[rules_config][] = rules_new_review_email
 features[user_permission][] = create review content
 features[user_permission][] = delete any review content
