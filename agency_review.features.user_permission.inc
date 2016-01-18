@@ -14,7 +14,6 @@ function agency_review_user_default_permissions() {
   $permissions['create review content'] = array(
     'name' => 'create review content',
     'roles' => array(
-      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
